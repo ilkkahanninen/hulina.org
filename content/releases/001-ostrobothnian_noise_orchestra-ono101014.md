@@ -8,7 +8,7 @@ genre:
   - electronic
   - industrial
 releaseDate: 2014-10-10
-bandcampUrl: https://hulina.bandcamp.com/album/ono101014
+bandcampUrl: https://ostronoise.bandcamp.com/album/ono101014
 spotifyUrl: https://open.spotify.com/album/09oAyulnkoFg5JDE2QvDaO?si=GclAV6eUQGO3DTTUoZxnmQ
 ---
 Vaikka tämä sivusto on vasta pystytetty, julkaisu- ja hulinatoimintaa Hulinalla on ollut jo hyvän tovin. Käymme tähänastiset julkaisumme läpi kronologisessa järjestyksessä aloittaen aivan alusta. Kyseessä on kipinän koko Hulinan perustamiselle antaneen yhtyeen ensimmäinen demo.

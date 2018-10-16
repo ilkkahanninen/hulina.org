@@ -8,17 +8,43 @@ import { Header } from "../components/Header"
 import { Image } from "../components/Image"
 import { Card } from "../components/Card"
 import { Title } from "../components/Title"
-import styled from "styled-components";
+import styled from "styled-components"
 
 interface Props {
   release: ReleaseData
 }
 
+const breakpoint = "800px"
+
 const BandCampEmbed = styled.iframe`
   width: 100%;
+  max-width: 700px;
   height: 120px;
   border: none;
-  margin: 50px auto;
+  background: white;
+`
+
+const Wrapper = styled.div`
+  position: relative;
+  padding-bottom: 150px;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  @media screen and (min-width: ${breakpoint}) {
+    display: flex;
+  }
+`
+
+const ImageWrapper = styled.div`
+  @media screen and (min-width: ${breakpoint}) {
+    img {
+      width: auto;
+      height: auto;
+      max-width: 50vw;
+      max-height: 66vh;
+      width: auto;
+    }
+  }
 `
 
 export default withRouteData(({ release }: Props) => {
@@ -33,14 +59,18 @@ export default withRouteData(({ release }: Props) => {
         route={getReleasePath(release)}
       />
       <Header />
-      <Image src={coverSrc} alt="" />
-      <Card>
-        <Title superText={release.author}>{release.title}</Title>
-        <HtmlContent content={release.description} />
-        {release.bandcampEmbed && (
-          <BandCampEmbed src={release.bandcampEmbed} />
-        )}
-      </Card>
+      <Wrapper>
+        <ImageWrapper>
+          <Image src={coverSrc} alt="" />
+          {release.bandcampEmbed && (
+            <BandCampEmbed src={release.bandcampEmbed} />
+          )}
+        </ImageWrapper>
+        <Card>
+          <Title superText={release.author}>{release.title}</Title>
+          <HtmlContent content={release.description} />
+        </Card>
+      </Wrapper>
     </div>
   )
 })

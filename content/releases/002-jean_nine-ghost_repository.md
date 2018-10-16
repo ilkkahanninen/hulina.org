@@ -7,7 +7,7 @@ genre:
   - electronic
   - glitch-hop
 releaseDate: 2015-09-16
-bandcampUrl: https://hulina.bandcamp.com/album/ghost-repository
+bandcampUrl: https://jean9.bandcamp.com/album/ghost-repository
 spotifyUrl: https://open.spotify.com/album/3RTVGnvRcm47qkZt1CivCA?si=1nuSK1rLSsSckh4yGQiz4Q
 ---
 Jean Nine on Ilkka Hännisen musiikkiprojekteista vanhin ja aktiivisin. Tyyli jatkuu Ghost Repository -albumilla edellisten julkaisujen viitoittamalla tiellä: horjuvaa elektroniikka, kevytmielistä glitchiä ja jonkilaista japanilaisen ja Yhdysvaltain länsirannikon abstraktin hiphopin karua väärinymmärtämistä.

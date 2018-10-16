@@ -6,7 +6,7 @@ cover: 003-ostrobothnian_noise_orchestra-babylonian_basalt.png
 genre:
   - noise
 releaseDate: 2014-04-24
-bandcampUrl: https://hulina.bandcamp.com/album/babylonian-basalt
+bandcampUrl: https://ostronoise.bandcamp.com/track/babylonian-basalt
 ---
 Hulina Recordsin juhlituimman lippulaivan Ostrobothnian Noise Orchestran eli ONOn sisällä on kuohunut suunnilleen koko sen olemassaolon ajan. Jatkuva vaappuminen perheystävällisen möhömusiikin ja kompromissittoman erikoismöykän välillä johti lopulta eksistentiaaliseen jakautumiseen kahdeksi entiteetiksi: ONO II taisteli itsensä olemassaolevaksi keskellä pimeintä syksyä 2014 kuin mikäkin rintalastan läpi tunkeva Kahdeksas matkustaja, ja muistutti, minkälaiset juuret tämä ”vapaaksi taidekollektiiviksi” väitetty retkue oikeastaan omaakaan.
 
@@ -44,7 +44,7 @@ Hän oli aina ajatellut kylmän karaisevan miehen. Oli kyse siis voimakkaan viho
 
 Salaa mielessään, jossain alitajunnan varjoisessa nurkassa, hän häpesi tapahtunutta. Tietoisesti hän ei voinut myöntää sitä itselleen. Tappion karvas kalkki poltteli haavoja. Punainen nuttu ja parta lämmittäisivät. Myyttinen peto vetämässä rekeä halki kirkkaana loimottavan kuun paisteen. Ne häneltä oli riistetty, kuten hän oli ne itse aiemmin riistänyt. Voiman ja vallan ikuinen kierto kuolevaisten käsissä, jotka eivät hallinneet tulta. Polttivat näppinsä, ajoivat itsensä kiirastuleen. Harva selvisi siitä hengissä, osa sekosi ja lukittiin loppuiäkseen hullujenhuoneelle. Hans oli siinä mielessä ollut voimakkaampi. Hänen mielensä oli liian suoraviivainen, että omaehtoisesti rakennettu hulluus tarttuisi sen sileään pintaan kiinni.
 
-Filosofin mieli taas oli kuin huokoista kalkkikiveä, jota maailman typeryyksien teon happamat sateet syövyttivät. Hän oli alistunut kaikkeuden tehtävälle, uhraamaan arvonsa ja periaatteensa. Hän hautoi taskussaan kirjeveistä, jonka oli pöydältään kaapannut mukaan viime hetkellä. Suunnittelematta. Kättä pidempää. Hulluutta. Kuin kollektiivisessa mielessämme mylvivää mystistä petoa alistettaisiin muutaman sentin pituisella tylsällä lelulla. Hän ymmärsi kuitenkin taiston luonteen. Se olisi erilainen. Se olisi henkinen taistelu. Sitä ei käytäisi asein, huhmarein. Se käytäisiin keinoin, jotka Neuvostoliitossa aikanaan hiottiin täydellisyyteen. 
+Filosofin mieli taas oli kuin huokoista kalkkikiveä, jota maailman typeryyksien teon happamat sateet syövyttivät. Hän oli alistunut kaikkeuden tehtävälle, uhraamaan arvonsa ja periaatteensa. Hän hautoi taskussaan kirjeveistä, jonka oli pöydältään kaapannut mukaan viime hetkellä. Suunnittelematta. Kättä pidempää. Hulluutta. Kuin kollektiivisessa mielessämme mylvivää mystistä petoa alistettaisiin muutaman sentin pituisella tylsällä lelulla. Hän ymmärsi kuitenkin taiston luonteen. Se olisi erilainen. Se olisi henkinen taistelu. Sitä ei käytäisi asein, huhmarein. Se käytäisiin keinoin, jotka Neuvostoliitossa aikanaan hiottiin täydellisyyteen.
 
 Veitsi, se oli vain amuletti valamassa uskoa.
 

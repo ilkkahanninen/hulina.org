@@ -1,6 +1,6 @@
 export const theme = {
   colors: {
-    primary: "#fc0",
+    primary: "#333",
     darkText: "#333",
     whiteText: "#fff"
   },
@@ -9,6 +9,6 @@ export const theme = {
     serif: "'Roboto Slab', serif",
   },
   layout: {
-    padding: 20,
+    padding: 30,
   },
 }
