@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "start": "react-static start",
-    "stage": "react-static build --staging",
-    "build": "react-static build",
+    "stage": "node resize-images.js && react-static build --staging",
+    "build": "node resize-images.js && react-static build",
     "serve": "serve dist -p 3000"
   },
   "dependencies": {
