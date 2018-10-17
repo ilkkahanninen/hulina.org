@@ -12,8 +12,8 @@ interface Props {
 const ContentWrapper = styled.div`
   position: absolute;
   left: 30px;
-  right: -10px;
-  bottom: 10px;
+  right: -20px;
+  bottom: 20px;
   z-index: 1;
 `
 
@@ -23,7 +23,8 @@ const Content = styled.div`
   bottom: 0;
 
   background: #222;
-  padding: 10px 20px 20px;
+  background: rgba(16, 16, 16, 0.95);
+  padding: 10px 40px 20px;
   text-align: right;
 
   &,
@@ -32,14 +33,12 @@ const Content = styled.div`
   }
 `
 
-const CardContainer = styled(Link)<{ image: string }>`
+const CardContainer = styled(Link)`
   position: relative;
-
-  background: url(${props => props.image});
-  background-size: cover;
 
   width: 100vw;
   height: 100vw;
+  padding: 5px;
 
   @media screen and (min-width: 700px) {
     width: 50vw;
@@ -52,15 +51,24 @@ const CardContainer = styled(Link)<{ image: string }>`
   }
 
   &:hover {
-    ${ContentWrapper} {
+    ${Content} {
       background: white;
+      background: rgba(255, 255, 255, 0.95);
       color: ${theme.colors.darkText};
     }
   }
 `
 
+const Image = styled.div<{ src: string }>`
+  width: 100%;
+  height: 100%;
+  background: url(${props => props.src});
+  background-size: cover;
+`
+
 export default ({ image, children, route }: Props) => (
-  <CardContainer to={route} image={image}>
+  <CardContainer to={route}>
+    <Image src={image} />
     <ContentWrapper>
       <Content>{children}</Content>
     </ContentWrapper>

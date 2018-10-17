@@ -22,15 +22,17 @@ const BandCampEmbed = styled.iframe`
   max-width: 700px;
   height: 120px;
   border: none;
-  background: white;
+  background: #222;
+  background: rgba(16, 16, 16, 0.95);
 
   @media screen and (min-width: ${breakpoint}) {
-    margin: -20px -20px 0 20px;
+    margin: -20px -40px 0 20px;
   }
 `
 
 const Wrapper = styled.div`
   position: relative;
+  padding-top: 5px;
   padding-bottom: 150px;
   max-width: 1400px;
   margin: 0 auto;
@@ -66,12 +68,14 @@ const TitleWrapper = styled.div`
 
   @media screen and (min-width: ${breakpoint}) {
     background: #222;
+    background: rgba(16, 16, 16, 0.95);
     color: white;
 
     margin-right: -${theme.layout.padding}px;
     margin-top: 10px;
     margin-left: -60px;
     margin-bottom: ${theme.layout.padding}px;
+    padding-left: 50px;
   }
 `
 
@@ -86,7 +90,7 @@ export default withRouteData(({ release }: Props) => {
         description={release.description}
         route={getReleasePath(release)}
       />
-      <Header />
+      <Header smallLogo={true} />
       <Wrapper>
         <ImageWrapper>
           <Image src={coverSrc} alt="" />
