@@ -1,3 +1,5 @@
 export const getImagePath = src => `/images/${src}`
 
-export const getReleasePath = release => `/julkaisu/${release.catalogNumber}`
+export const releasesPath = "/julkaisut"
+
+export const getReleasePath = release => `${releasesPath}/${release.catalogNumber}`

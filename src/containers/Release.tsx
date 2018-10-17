@@ -1,14 +1,15 @@
 import React from "react"
 import { withRouteData } from "react-static"
-import HtmlContent from "../components/HtmlContent"
-import { PageMeta } from "../components/PageMeta"
-import { ReleaseData } from "../types"
-import { getReleasePath, getImagePath } from "../model/paths"
-import { Header } from "../components/Header"
-import { Image } from "../components/Image"
-import { Card } from "../components/Card"
-import { Title } from "../components/Title"
 import styled from "styled-components"
+import { Card } from "../components/Card"
+import { Header } from "../components/Header"
+import HtmlContent from "../components/HtmlContent"
+import { Image } from "../components/Image"
+import { PageMeta } from "../components/PageMeta"
+import ReleaseTitle from "../components/ReleaseTitle"
+import { getImagePath, getReleasePath } from "../model/paths"
+import { theme } from "../theme"
+import { ReleaseData } from "../types"
 
 interface Props {
   release: ReleaseData
@@ -22,6 +23,10 @@ const BandCampEmbed = styled.iframe`
   height: 120px;
   border: none;
   background: white;
+
+  @media screen and (min-width: ${breakpoint}) {
+    margin: -20px -20px 0 20px;
+  }
 `
 
 const Wrapper = styled.div`
@@ -47,6 +52,29 @@ const ImageWrapper = styled.div`
   }
 `
 
+const TitleWrapper = styled.div`
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+
+  margin: -${theme.layout.padding}px;
+  margin-bottom: ${theme.layout.padding}px;
+  padding: 30px 100px 30px ${theme.layout.padding}px;
+
+  background: #f0f0f0;
+  color: ${theme.colors.darkText};
+
+  @media screen and (min-width: ${breakpoint}) {
+    background: #222;
+    color: white;
+
+    margin-right: -${theme.layout.padding}px;
+    margin-top: 10px;
+    margin-left: -60px;
+    margin-bottom: ${theme.layout.padding}px;
+  }
+`
+
 export default withRouteData(({ release }: Props) => {
   const coverSrc = getImagePath(release.cover)
 
@@ -67,7 +95,9 @@ export default withRouteData(({ release }: Props) => {
           )}
         </ImageWrapper>
         <Card>
-          <Title superText={release.author}>{release.title}</Title>
+          <TitleWrapper>
+            <ReleaseTitle release={release} />
+          </TitleWrapper>
           <HtmlContent content={release.description} />
         </Card>
       </Wrapper>

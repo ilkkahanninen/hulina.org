@@ -5,6 +5,11 @@ export default async () => {
   const releases = await getReleases()
 
   return [
+    {
+      path: "/",
+      component: "src/containers/Home",
+      getData: () => ({ releases }),
+    },
     ...releases.map(release => ({
       path: getReleasePath(release),
       component: "src/containers/Release",
