@@ -7,7 +7,7 @@ import HtmlContent from "../components/HtmlContent"
 import { Image } from "../components/Image"
 import { PageMeta } from "../components/PageMeta"
 import ReleaseTitle from "../components/ReleaseTitle"
-import { getImagePath, getReleasePath } from "../model/paths"
+import { getImagePath, getReleasePath, getImageFilename } from "../model/paths"
 import { theme } from "../theme"
 import { ReleaseData } from "../types"
 
@@ -80,7 +80,7 @@ const TitleWrapper = styled.div`
 `
 
 export default withRouteData(({ release }: Props) => {
-  const coverSrc = getImagePath(release.cover)
+  const coverSrc = getImagePath(getImageFilename(release.cover, 700))
 
   return (
     <div>

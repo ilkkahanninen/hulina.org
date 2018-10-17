@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "react-static"
 import { theme } from "../theme"
+import { getImageFilename } from "../model/paths";
 
 interface Props {
   image: string
@@ -62,7 +63,7 @@ const CardContainer = styled(Link)`
 const Image = styled.div<{ src: string }>`
   width: 100%;
   height: 100%;
-  background: url(${props => props.src});
+  background: url(${props => getImageFilename(props.src, 700)});
   background-size: cover;
 `
 
