@@ -6,36 +6,22 @@ import { Header } from "../components/Header"
 import HtmlContent from "../components/HtmlContent"
 import { Image } from "../components/Image"
 import { PageMeta } from "../components/PageMeta"
-import ReleaseTitle from "../components/ReleaseTitle"
-import { getImagePath, getReleasePath, getImageFilename } from "../model/paths"
+import { getImagePath, getImageFilename, getArticlePath } from "../model/paths"
 import { theme } from "../theme"
-import { ExtendedReleaseData } from "../types"
+import { ExtendedArticleData } from "../types"
 import Footer from "../components/Footer"
 import { formatDate } from "../utils/dates"
+import { Title } from "../components/Title"
 
 interface Props {
-  release: ExtendedReleaseData
+  article: ExtendedArticleData
 }
 
 const breakpoint = "800px"
 
-const BandCampEmbed = styled.iframe`
-  width: 100%;
-  max-width: 700px;
-  height: 120px;
-  border: none;
-  background: #222;
-  background: rgba(16, 16, 16, 0.95);
-
-  @media screen and (min-width: ${breakpoint}) {
-    margin: -20px -40px 0 20px;
-  }
-`
-
 const Wrapper = styled.div`
   position: relative;
   padding-top: 5px;
-  padding-bottom: 150px;
   max-width: 1400px;
   margin: 0 auto;
 
@@ -49,9 +35,10 @@ const ImageWrapper = styled.div`
     img {
       width: auto;
       height: auto;
-      max-width: 50vw;
+      max-width: 33vw;
       max-height: 80vh;
       width: auto;
+      margin-top: 100px;
     }
   }
 `
@@ -75,7 +62,7 @@ const TitleWrapper = styled.div`
 
     margin-right: -${theme.layout.padding}px;
     margin-top: 10px;
-    margin-left: -60px;
+    margin-left: -90px;
     margin-bottom: ${theme.layout.padding}px;
     padding-left: 50px;
   }
@@ -92,43 +79,58 @@ const ReleaseDate = styled.span`
   margin-right: 2ex;
 `
 
-const Genre = styled.span`
+const Author = styled.span`
   color: rgba(255, 255, 255, 0.5);
   margin-right: 2ex;
 `
 
-export default withRouteData(({ release }: Props) => {
-  const coverSrc = getImagePath(getImageFilename(release.cover, 700))
+const Lead = styled.p`
+  font-size: 140%;
+  line-height: 1.75em;
+  font-style: italic;
+`
+
+const Body = styled.div`
+  max-width: 1000px;
+  margin: 40px auto 150px;
+  font-size: 120%;
+  line-height: 1.75em;
+`
+
+export default withRouteData(({ article }: Props) => {
+  const coverSrc = getImagePath(getImageFilename(article.cover, 700))
 
   return (
     <div>
       <PageMeta
-        title={`${release.author} – ${release.title}`}
+        title={article.title}
         image={coverSrc}
-        description={release.description}
-        route={getReleasePath(release)}
+        description={article.lead}
+        route={getArticlePath(article)}
       />
       <Header smallLogo={true} />
       <Wrapper>
         <ImageWrapper>
           <Image src={coverSrc} alt="" />
-          {release.bandcampEmbed && (
-            <BandCampEmbed src={release.bandcampEmbed} />
-          )}
         </ImageWrapper>
         <Card>
           <TitleWrapper>
-            <ReleaseTitle release={release} />
+            <Title>{article.title}</Title>
             <CatalogInfo>
-              <ReleaseDate>{formatDate(release.releaseDate)}</ReleaseDate>
-              {release.genre.map(genre => (
-                <Genre key={genre}>{genre}</Genre>
-              ))}
+              <ReleaseDate>{formatDate(article.releaseDate)}</ReleaseDate>
+              <Author>{article.author}</Author>
             </CatalogInfo>
           </TitleWrapper>
-          <HtmlContent content={release.description} />
+          <Lead>{article.lead}</Lead>
         </Card>
       </Wrapper>
+      <Body>
+        <HtmlContent content={article.body} />
+        <TitleWrapper>
+          <ReleaseDate>{formatDate(article.releaseDate)}</ReleaseDate>
+          <Author>{article.author}</Author>
+        </TitleWrapper>
+      </Body>
       <Footer />
     </div>
   )

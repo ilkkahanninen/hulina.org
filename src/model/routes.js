@@ -1,6 +1,6 @@
 import * as R from "ramda"
-import { getReleases } from "./data"
-import { getReleasePath } from "./paths"
+import { getReleases, getArticles } from "./data"
+import { getReleasePath, getArticlePath } from "./paths"
 import resizeImages from "../../resize-images"
 
 const optimizeReleases = R.map(
@@ -8,7 +8,11 @@ const optimizeReleases = R.map(
 )
 
 export default async () => {
-  const [releases] = await Promise.all([getReleases(), resizeImages()])
+  const [releases, articles] = await Promise.all([
+    getReleases(),
+    getArticles(),
+    resizeImages(),
+  ])
 
   return [
     {
@@ -20,6 +24,11 @@ export default async () => {
       path: getReleasePath(release),
       component: "src/containers/Release",
       getData: () => ({ release }),
+    })),
+    ...articles.map(article => ({
+      path: getArticlePath(article),
+      component: "src/containers/Article",
+      getData: () => ({ article }),
     })),
     {
       is404: true,

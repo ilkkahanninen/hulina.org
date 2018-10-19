@@ -7,3 +7,5 @@ export const releasesPath = "/julkaisut"
 
 export const getReleasePath = release =>
   `${releasesPath}/${release.catalogNumber}`
+
+export const getArticlePath = article => `/${article.id}`

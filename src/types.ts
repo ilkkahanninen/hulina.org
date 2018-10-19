@@ -13,3 +13,15 @@ export interface ExtendedReleaseData extends ReleaseData {
   bandcampEmbed?: string
   spotifyUrl?: string
 }
+
+export interface ArticleData {
+  title: string
+  cover: string
+  releaseDate: string
+}
+
+export interface ExtendedArticleData extends ArticleData {
+  author: string
+  lead: string
+  body: string
+}

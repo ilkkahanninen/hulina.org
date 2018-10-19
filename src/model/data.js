@@ -5,8 +5,6 @@ import { promisify } from "util"
 import * as yamlFront from "yaml-front-matter"
 import axios from "axios"
 
-const releasesPath = "content/releases"
-
 const readDir = promisify(fs.readdir)
 const readFile = promisify(fs.readFile)
 
@@ -29,23 +27,35 @@ const getBandCampEmbedCode = async url => {
   return undefined
 }
 
-export const getReleases = async () => {
-  const files = await readDir(releasesPath)
-
+const loadMarkdownFiles = async (src, callback) => {
+  const files = await readDir(src)
   return Promise.all(
     files.map(async file => {
-      const source = (await readFile(path.join(releasesPath, file))).toString()
-      const { __content, author, ...header } = yamlFront.loadFront(source)
-      const id = file.replace(/\.md$/, "")
-      const bandcampEmbed = await getBandCampEmbedCode(header.bandcampUrl)
-
-      return {
-        id,
-        ...header,
-        author: author || "Eri esittäjiä",
-        bandcampEmbed,
-        description: marked(__content),
-      }
+      const source = (await readFile(path.join(src, file))).toString()
+      return callback({
+        id: file.replace(/\.md$/, ""),
+        ...yamlFront.loadFront(source),
+      })
     }),
   )
 }
+
+export const getReleases = () =>
+  loadMarkdownFiles(
+    "content/releases",
+    async ({ __content, author, ...header }) => ({
+      ...header,
+      author: author || "Eri esittäjiä",
+      bandcampEmbed: await getBandCampEmbedCode(header.bandcampUrl),
+      description: marked(__content),
+    }),
+  )
+
+export const getArticles = () =>
+  loadMarkdownFiles(
+    "content/articles",
+    async ({ __content, ...header }) => ({
+      ...header,
+      body: marked(__content),
+    }),
+  )

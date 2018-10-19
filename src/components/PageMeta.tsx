@@ -14,7 +14,7 @@ export const PageMeta: React.SFC<Props> = ({
   description,
   route,
 }) => {
-  const fullTitle = `Hulina${title ? ` – ${title}` : ""}`
+  const fullTitle = `${title ? `${title} | ` : ""}Hulina`
   const descr = description || "Vaihtoehtokulttuuriyhdistys"
   const imageSrc = `${process.env.PUBLIC_URL}/${
     image ? `images/${image}` : "static_images/hulina-opengraph.png"
