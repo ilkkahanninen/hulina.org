@@ -1,7 +1,6 @@
 {
   "name": "hulinapedia",
   "version": "1.0.0",
-  "homepage": "https://hulina.netlify.com",
   "main": "index.js",
   "license": "MIT",
   "scripts": {

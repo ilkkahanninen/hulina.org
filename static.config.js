@@ -5,6 +5,7 @@ import chokidar from "chokidar"
 import { ServerStyleSheet } from "styled-components"
 import React from "react"
 import getRoutes from "./src/model/routes"
+import { publicURL } from "./config"
 
 // Paths Aliases defined through tsconfig.json
 const typescriptWebpackPaths = require("./webpack.config.js")
@@ -12,7 +13,7 @@ const typescriptWebpackPaths = require("./webpack.config.js")
 chokidar.watch("content").on("all", () => reloadRoutes())
 
 export default {
-  siteRoot: process.env.BUILD_LOCAL ? undefined : process.env.PUBLIC_URL,
+  siteRoot: process.env.BUILD_LOCAL ? undefined : publicURL,
   entry: path.join(__dirname, "src", "index.tsx"),
   getSiteData: () => ({}),
   getRoutes,

@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Head } from "react-static"
+import { publicURL } from "../../config"
 
 interface Props {
   title?: string
@@ -16,9 +17,8 @@ export const PageMeta: React.SFC<Props> = ({
 }) => {
   const fullTitle = `${title ? `${title} | ` : ""}Hulina`
   const descr = description || "Vaihtoehtokulttuuriyhdistys"
-  const imageSrc = `${process.env.PUBLIC_URL}/${
-    image ? `images/${image}` : "static_images/hulina-opengraph.png"
-  }`
+  const imageSrc = `${publicURL}${image ||
+    "/static_images/hulina-opengraph.png"}`
 
   return (
     <Head>
@@ -29,7 +29,7 @@ export const PageMeta: React.SFC<Props> = ({
       <meta property="og:description" content={descr} />
       <meta property="og:image" content={imageSrc} />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content={`${process.env.PUBLIC_URL}${route}/`} />
+      <meta property="og:url" content={`${publicURL}${route}/`} />
       <meta property="og:locale" content="fi_FI" />
     </Head>
   )
