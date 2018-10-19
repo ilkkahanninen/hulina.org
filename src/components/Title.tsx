@@ -16,6 +16,7 @@ const SuperText = styled.div`
   font-family: ${theme.fonts.serif};
   text-transform: uppercase;
   font-size: 80%;
+  opacity: 0.75;
 `
 
 export const Title = ({ children, superText }: Props) => (

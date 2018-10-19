@@ -6,7 +6,7 @@ cover: 014-ville_suopajarvi-maisemakuvia_somesta.png
 genre:
   - ambient
   - singer-songwriter
-releaseDate: 2017-07-17
+releaseDate: 2017-03-17
 bandcampUrl: https://hulina.bandcamp.com/album/maisemakuvia-somesta
 ---
 Ville A.E. Suopajärvi on vähän kuin taidekouluun mennyt serkku, joka kuuli Ville Leinosen Raastinlauluja-albumin ns. ”herkässä iässä”, ja jäi sille tielle. Tämän lisäksi hän on saattanut katsoa paljon animea ja kauhuleffoja, ja ehkä tehnyt myös ystävineen tai yksin puoliääneen supatettuja radiokuunnelmia yöaikaan. Jos Ville Suopajärvi pitäisi keksiä, niin hänen hahmonsa tekisi suunnilleen näitä juttuja.

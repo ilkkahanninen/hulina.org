@@ -35,7 +35,7 @@ const StyledLink = styled(Link)`
   }
 
   &:hover {
-    margin-left: 20px;
+    margin-left: 5px;
   }
 `
 

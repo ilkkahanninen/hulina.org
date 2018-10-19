@@ -10,7 +10,8 @@ import ReleaseTitle from "../components/ReleaseTitle"
 import { getImagePath, getReleasePath, getImageFilename } from "../model/paths"
 import { theme } from "../theme"
 import { ExtendedReleaseData } from "../types"
-import Footer from "../components/Footer";
+import Footer from "../components/Footer"
+import { formatDate } from "../utils/dates"
 
 interface Props {
   release: ExtendedReleaseData
@@ -80,6 +81,22 @@ const TitleWrapper = styled.div`
   }
 `
 
+const CatalogInfo = styled.div`
+  font-size: 80%
+  text-transform: uppercase;
+  margin-top: 4px;
+`
+
+const ReleaseDate = styled.span`
+  color: rgba(255, 255, 255, 0.75);
+  margin-right: 2ex;
+`
+
+const Genre = styled.span`
+  color: rgba(255, 255, 255, 0.5);
+  margin-right: 2ex;
+`
+
 export default withRouteData(({ release }: Props) => {
   const coverSrc = getImagePath(getImageFilename(release.cover, 700))
 
@@ -102,6 +119,12 @@ export default withRouteData(({ release }: Props) => {
         <Card>
           <TitleWrapper>
             <ReleaseTitle release={release} />
+            <CatalogInfo>
+              <ReleaseDate>{formatDate(release.releaseDate)}</ReleaseDate>
+              {release.genre.map(genre => (
+                <Genre key={genre}>{genre}</Genre>
+              ))}
+            </CatalogInfo>
           </TitleWrapper>
           <HtmlContent content={release.description} />
         </Card>
