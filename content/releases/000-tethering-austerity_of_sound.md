@@ -1,12 +1,14 @@
 ---
-catalogNumber: "000"
-author: Tethering
 title: Austerity of Sound
-cover: 000-tethering-austerity_of_sound.png
+catalogNumber: '000'
+author: Tethering
+releaseDate: 2013-11-22T00:00:00.000Z
+cover: /images/000-tethering-austerity_of_sound.png
 genre:
   - ambient
-releaseDate: 2013-11-22
-bandcampUrl: https://jean9.bandcamp.com/album/austerity-of-sound
+  - drone
+  - noise
+bandcampUrl: 'https://jean9.bandcamp.com/album/austerity-of-sound'
 ---
 Kun venyttää puolen minuutin nostatus kymmeneen minuuttiin, sen luonne muuttuu. Se on musiikin vastine sammakolle kuumenevassa vedessä.
 
