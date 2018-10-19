@@ -47,7 +47,7 @@ Suomirockin Mount Rushmoren lisäksi Janne viehättyi samoihin aikoihin myös pr
 
 ”Ostin Jethro Tullin Living in the Pastin Tampereen Bonuskirppikseltä. Olin kuullut muutaman kappaleen aiemmin, ja mietin että tuonhan voisi ostaa. Kuuntelin sitten vanhempien vinyylisoittimella sitä, ja innostuin kovasti. Yritin soittaa niitä huilumelodioita nokkahuilulla. 17-vuotiaana kesätyörahoilla ostinkin sitten poikkihuilun! Olin raksahommissa ja tienasin aika hyvinkin… Laulava talonmies… Eiku laulava raksamies! Raksamiehestä muusikoksi… Eiku raksamiehestä itsemurhayksiössä ryyppääväksi dekadenttimulkuksi!!!”
 
-[janneboi4](/images/janneboi4.jpg) !
+![](/images/janneboi4.jpg)
 
 ## Raksamiehestä levylaulajaksi
 
@@ -81,7 +81,7 @@ In Our Artin jälkeen ilmestyi Hankiainen 1966. Se ei ollut edeltäjänsä kalta
 
 ”Ehkä olen näillä uudemmilla levyillä halunnut sanoa joitakin olennaisia juttuja, joita olen aina halunnut sanoa. Elämän synkempiä puolia, ja käsitellyt niitä sitten jonkun absurdin näkökulman kautta. Kuolemanpelko on myös yksi asia, joka on vaikuttanut tekemisiin pitkään. Oikeastaan se on vain vahvistunut aikojen saatossa, kun on miettinyt vain enemmän sitä absurdiutta, että esimerkiksi tätäkään haastattelua ei ole enää silloin olemassa minulle, kun olen kuollut. Sellainen outo ajatus, jota on hakenut levyihin…”
 
-[beatjanne8](/images/beatjanne8.jpg) !!
+![](/images/beatjanne8.jpg)
 
 ## Kuolemanpelkoa, yksinäisyyttä, traumoja
 
