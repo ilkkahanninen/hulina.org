@@ -16,6 +16,8 @@ const SuperText = styled.div`
   font-family: ${theme.fonts.serif};
   text-transform: uppercase;
   font-size: 80%;
+  line-height: 1.25em;
+  margin-bottom: 8px;
   opacity: 0.75;
 `
 
