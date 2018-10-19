@@ -1,19 +1,19 @@
-import { reloadRoutes } from 'react-static/node'
-import ExtractTextPlugin from 'extract-text-webpack-plugin'
-import path from 'path'
-import chokidar from 'chokidar'
-import { ServerStyleSheet } from 'styled-components'
-import React from 'react'
-import getRoutes from './src/model/routes'
+import { reloadRoutes } from "react-static/node"
+import ExtractTextPlugin from "extract-text-webpack-plugin"
+import path from "path"
+import chokidar from "chokidar"
+import { ServerStyleSheet } from "styled-components"
+import React from "react"
+import getRoutes from "./src/model/routes"
 
 // Paths Aliases defined through tsconfig.json
-const typescriptWebpackPaths = require('./webpack.config.js')
+const typescriptWebpackPaths = require("./webpack.config.js")
 
-chokidar.watch('content').on('all', () => reloadRoutes())
+chokidar.watch("content").on("all", () => reloadRoutes())
 
 export default {
-  siteRoot: 'https://hulina.netlify.com/',
-  entry: path.join(__dirname, 'src', 'index.tsx'),
+  siteRoot: process.env.BUILD_LOCAL ? undefined : process.env.PUBLIC_URL,
+  entry: path.join(__dirname, "src", "index.tsx"),
   getSiteData: () => ({}),
   getRoutes,
   renderToHtml: (render, Comp, meta) => {
@@ -25,9 +25,17 @@ export default {
     // Return the html string for the page
     return html
   },
+  Document: ({ Html, Head, Body, children, renderMeta }) => (
+    // `renderMeta.styleTags` contains the styles we need to inject
+    // into the head of each page.
+    <Html>
+      <Head>{renderMeta.styleTags}</Head>
+      <Body>{children}</Body>
+    </Html>
+  ),
   webpack: (config, { defaultLoaders }) => {
     // Add .ts and .tsx extension to resolver
-    config.resolve.extensions.push('.ts', '.tsx')
+    config.resolve.extensions.push(".ts", ".tsx")
 
     // Add TypeScript Path Mappings (from tsconfig via webpack.config.js)
     // to react-statics alias resolution
@@ -43,10 +51,10 @@ export default {
             exclude: defaultLoaders.jsLoader.exclude, // as std jsLoader exclude
             use: [
               {
-                loader: 'babel-loader',
+                loader: "babel-loader",
               },
               {
-                loader: require.resolve('ts-loader'),
+                loader: require.resolve("ts-loader"),
                 options: {
                   transpileOnly: true,
                 },
@@ -59,7 +67,7 @@ export default {
       },
     ]
 
-    config.plugins.push(new ExtractTextPlugin('styles.css'))
+    config.plugins.push(new ExtractTextPlugin("styles.css"))
 
     return config
   },

@@ -1,6 +1,11 @@
+import * as R from "ramda"
 import { getReleases } from "./data"
 import { getReleasePath } from "./paths"
 import resizeImages from "../../resize-images"
+
+const optimizeReleases = R.map(
+  R.pick(["catalogNumber", "author", "title", "cover", "releaseDate"]),
+)
 
 export default async () => {
   const [releases] = await Promise.all([getReleases(), resizeImages()])
@@ -9,7 +14,7 @@ export default async () => {
     {
       path: "/",
       component: "src/containers/Home",
-      getData: () => ({ releases }),
+      getData: () => ({ releases: optimizeReleases(releases) }),
     },
     ...releases.map(release => ({
       path: getReleasePath(release),

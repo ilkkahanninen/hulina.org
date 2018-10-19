@@ -3,8 +3,11 @@ export interface ReleaseData {
   author: string
   title: string
   cover: string
-  genre: string[]
   releaseDate: string
+}
+
+export interface ExtendedReleaseData extends ReleaseData {
+  genre: string[]
   description: string
   bandcampUrl?: string
   bandcampEmbed?: string

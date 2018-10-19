@@ -1,16 +1,17 @@
 {
   "name": "hulinapedia",
   "version": "1.0.0",
+  "homepage": "https://hulina.netlify.com",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "start": "react-static start",
     "stage": "react-static build --staging",
     "build": "react-static build",
+    "build:local": "LOCAL_BUILD=true react-static build",
     "serve": "serve dist -p 3000"
   },
   "dependencies": {
-    "@types/ramda": "^0.25.39",
     "axios": "^0.18.0",
     "chokidar": "^2.0.4",
     "extract-text-webpack-plugin": "^3.0.2",
@@ -27,6 +28,7 @@
   },
   "devDependencies": {
     "@types/node": "^10.11.4",
+    "@types/ramda": "^0.25.39",
     "@types/react": "^16.0.40",
     "@types/react-dom": "^16.0.4",
     "@types/react-hot-loader": "^4.1.0",

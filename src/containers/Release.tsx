@@ -9,11 +9,11 @@ import { PageMeta } from "../components/PageMeta"
 import ReleaseTitle from "../components/ReleaseTitle"
 import { getImagePath, getReleasePath, getImageFilename } from "../model/paths"
 import { theme } from "../theme"
-import { ReleaseData } from "../types"
+import { ExtendedReleaseData } from "../types"
 import Footer from "../components/Footer";
 
 interface Props {
-  release: ReleaseData
+  release: ExtendedReleaseData
 }
 
 const breakpoint = "800px"
