@@ -10,6 +10,7 @@ import ReleaseTitle from "../components/ReleaseTitle"
 import { getImagePath, getReleasePath, getImageFilename } from "../model/paths"
 import { theme } from "../theme"
 import { ReleaseData } from "../types"
+import Footer from "../components/Footer";
 
 interface Props {
   release: ReleaseData
@@ -105,6 +106,7 @@ export default withRouteData(({ release }: Props) => {
           <HtmlContent content={release.description} />
         </Card>
       </Wrapper>
+      <Footer />
     </div>
   )
 })

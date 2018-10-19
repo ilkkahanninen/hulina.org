@@ -8,6 +8,7 @@ import { PageMeta } from "../components/PageMeta"
 import ReleaseTitle from "../components/ReleaseTitle"
 import { getImagePath, getReleasePath } from "../model/paths"
 import { ReleaseData } from "../types"
+import Footer from "../components/Footer";
 
 interface Props {
   releases: ReleaseData[]
@@ -37,5 +38,6 @@ export default withRouteData(({ releases }: Props) => (
         </HomeCard>
       ))}
     </Container>
+    <Footer />
   </div>
 ))
