@@ -1,8 +1,9 @@
 import { getReleases } from "./data"
 import { getReleasePath } from "./paths"
+import resizeImages from "../../resize-images"
 
 export default async () => {
-  const releases = await getReleases()
+  const [releases] = await Promise.all([getReleases(), resizeImages()])
 
   return [
     {

@@ -3,6 +3,8 @@ const path = require("path")
 const { promisify } = require("util")
 const sharp = require("sharp")
 
+const imageSizes = [700]
+
 const imagesPath = "content/images"
 const targetPath = "public/images"
 
@@ -17,7 +19,7 @@ const resize = (source, file) => width =>
     .resize(width)
     .toFile(path.join(targetPath, getImageFilename(file, width)))
 
-const resizeImages = async () => {
+module.exports = async () => {
   const files = await readDir(imagesPath)
 
   return Promise.all(
@@ -25,12 +27,10 @@ const resizeImages = async () => {
       try {
         const source = await readFile(path.join(imagesPath, file))
         const resizeTo = resize(source, file)
-        await Promise.all([resizeTo(700), resizeTo(1400)])
+        await Promise.all(imageSizes.map(resizeTo))
       } catch (err) {
         console.error(err)
       }
     }),
   )
 }
-
-resizeImages()
