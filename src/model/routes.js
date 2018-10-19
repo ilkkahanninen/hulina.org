@@ -11,6 +11,10 @@ const optimizeArticles = R.map(
   R.pick(["type", "id", "title", "cover", "releaseDate"]),
 )
 
+const sortByDate = R.sort(
+  (a, b) => (new Date(a.releaseDate) < new Date(b.releaseDate) ? 1 : -1),
+)
+
 export default async () => {
   const [releases, articles] = await Promise.all([
     getReleases(),
@@ -18,12 +22,17 @@ export default async () => {
     resizeImages(),
   ])
 
+  const entries = sortByDate([
+    ...optimizeReleases(releases),
+    ...optimizeArticles(articles),
+  ])
+
   return [
     {
       path: "/",
       component: "src/containers/Home",
       getData: () => ({
-        entries: [...optimizeReleases(releases), ...optimizeArticles(articles)],
+        entries,
       }),
     },
     ...releases.map(release => ({

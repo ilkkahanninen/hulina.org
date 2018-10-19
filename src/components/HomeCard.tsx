@@ -65,6 +65,7 @@ const Image = styled.div<{ src: string }>`
   height: 100%;
   background: url(${props => getImageFilename(props.src, 700)});
   background-size: cover;
+  background-position: center;
 `
 
 export default ({ image, children, route }: Props) => (

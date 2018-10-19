@@ -20,16 +20,12 @@ const Container = styled.div`
   flex-wrap: wrap;
 `
 
-const sortByDate = R.sort(
-  (a: HomeEntry, b: HomeEntry) => (a.releaseDate < b.releaseDate ? 1 : -1),
-)
-
 export default withRouteData(({ entries }: Props) => (
   <div>
     <PageMeta title="Etusivu" />
     <Header />
     <Container>
-      {sortByDate(entries).map((entry, index) => {
+      {entries.map((entry, index) => {
         switch (entry.type) {
           case "release":
             return (
