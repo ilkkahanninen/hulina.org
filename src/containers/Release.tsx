@@ -58,17 +58,17 @@ const ImageWrapper = styled.div`
 
 const TitleWrapper = styled.div`
   position: relative;
-  display: inline-block;
   z-index: 1;
 
   margin: -${theme.layout.padding}px;
+  margin-top: 0;
   margin-bottom: ${theme.layout.padding}px;
   padding: 30px 100px 30px ${theme.layout.padding}px;
 
-  background: #f0f0f0;
   color: ${theme.colors.darkText};
 
   @media screen and (min-width: ${breakpoint}) {
+    display: inline-block;
     background: #222;
     background: rgba(16, 16, 16, 0.95);
     color: white;
@@ -88,12 +88,12 @@ const CatalogInfo = styled.div`
 `
 
 const ReleaseDate = styled.span`
-  color: rgba(255, 255, 255, 0.75);
+  oapcity: 0.75;
   margin-right: 2ex;
 `
 
 const Genre = styled.span`
-  color: rgba(255, 255, 255, 0.5);
+  opacity: 0.5;
   margin-right: 2ex;
 `
 

@@ -45,21 +45,18 @@ const ImageWrapper = styled.div`
 
 const TitleWrapper = styled.div`
   position: relative;
-  display: inline-block;
   z-index: 1;
 
   margin: -${theme.layout.padding}px;
   margin-bottom: ${theme.layout.padding}px;
   padding: 30px 100px 30px ${theme.layout.padding}px;
 
-  background: #f0f0f0;
-  color: ${theme.colors.darkText};
+  background: #222;
+  background: rgba(16, 16, 16, 0.95);
+  color: white;
 
   @media screen and (min-width: ${breakpoint}) {
-    background: #222;
-    background: rgba(16, 16, 16, 0.95);
-    color: white;
-
+    display: inline-block;
     margin-right: -${theme.layout.padding}px;
     margin-top: 10px;
     margin-left: -90px;
@@ -70,6 +67,7 @@ const TitleWrapper = styled.div`
 
 const CatalogInfo = styled.div`
   font-size: 80%
+  line-height: 1.25em;
   text-transform: uppercase;
   margin-top: 4px;
 `
@@ -95,6 +93,7 @@ const Body = styled.div`
   margin: 40px auto 150px;
   font-size: 120%;
   line-height: 1.75em;
+  padding: 0 ${theme.layout.padding}px;
 `
 
 export default withRouteData(({ article }: Props) => {
