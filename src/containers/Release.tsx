@@ -105,7 +105,9 @@ export default withRouteData(({ release }: Props) => {
       <PageMeta
         title={`${release.author} – ${release.title}`}
         image={coverSrc}
-        description={release.description}
+        description={`Hulina-julkaisu #${release.catalogNumber} (${formatDate(
+          release.releaseDate,
+        )}): ${release.genre.join(", ")}`}
         route={getReleasePath(release)}
       />
       <Header smallLogo={true} />
