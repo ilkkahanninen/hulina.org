@@ -1,7 +1,7 @@
 ---
 title: Jannen Hengentuotteet
 author: 'Tekstit ja kuvat: Mikael Mattila'
-releaseDate: '2018-10-19'
+releaseDate: '2015-10-01'
 cover: /images/janneboi1.jpg
 lead: >-
   Mitä muka oli ennen syntymää? En muista 60-luvusta mitään, se oli helppoa
