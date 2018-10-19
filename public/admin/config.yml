@@ -3,11 +3,12 @@ backend:
   branch: master
 
 media_folder: content/images
-public_folder: /images
+public_folder: ""
 
 collections:
   - name: "release"
-    label: "Release"
+    label: "Releases"
+    label_singular: "Release"
     folder: "content/releases"
     create: true
     slug: "{{catalogNumber}}-{{slug}}"
@@ -21,3 +22,5 @@ collections:
       - { label: "Description", name: "body", widget: "markdown" }
       - { label: "Bandcamp URL", name: "bandcampUrl", widget: "string" }
       - { label: "Spotify URL", name: "spotifyUrl", widget: "string", required: false }
+    editor:
+      preview: false
