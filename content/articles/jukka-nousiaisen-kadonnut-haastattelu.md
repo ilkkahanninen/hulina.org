@@ -1,15 +1,15 @@
 ---
 title: Jukka Nousiaisen kadonnut haastattelu
-author: Mikael Mattila
+author: "Teksti ja kuvat: Mikael Mattila (pl. artikkelikuva: Sini Mäenpää)"
 lead: Tämä on Jukka Nousiaisen KADONNUT HAASTATTELU. Se on tehty kahdessa osassa syksyllä 2014, Huonoa seuraa -debyyttilevyn ilmestymisen jälkeen. Sen piti alun perin ilmestyä Hulinan nettisivuilla jo tuolloin, koska Hulinasta suunniteltiin nettipohjaista zineä. Toisin kävi, ja haastattelu hautautui arkistoihin.
 cover: /images/jukka-nousiainen-01.jpg
 releaseDate: 2017-03-20
 ---
-Seuraavassa muutama käsittelemämme aihe: Räjäyttäjät-yhtyeen synty, Jukan musiikkitieteen opinnot Jyväskylän yliopistossa, Pekka Airaksinen, Jussi Lehtisalo, Jukan musiikin lapsiepäystävällisyys (toim. huom.)
+_Seuraavassa muutama käsittelemämme aihe: Räjäyttäjät-yhtyeen synty, Jukan musiikkitieteen opinnot Jyväskylän yliopistossa, Pekka Airaksinen, Jussi Lehtisalo, Jukan musiikin lapsiepäystävällisyys._
 
-teksti ja kuvat: Mikael Mattila (pl. artikkelikuva: Sini Mäenpää)
+---
 
-RAVINTOLA SALSA ORKIDEAA ei enää ole olemassa. Syksyllä 2014 se sijaitsi Jyväskylän Kauppakadulla legendaarisen Vakiopaineen naapurissa. Nopean googlauksen kautta lopettamiselle löytyy varsin yksiselitteinen peruste; asiakaspalaute näyttää olleen kautta linjan sangen nihkeää. Muistan itsekin ihmetelleeni erikoista ravintolaa, joka ei oikein osannut päättää, satsaako se meksikolaiseen vaiko aasialaiseen ruokaan, vai turvautuuko se perinteiseen pizzakebab-linjaan. Syy visiitille löytyikin ruokatarjonnan sijaan ihan muualta: paikan ikkunassa ilmoitettiin suurin kirjaimin oluttuopin hinnaksi 2,50 euroa. Sijainti vieressä sijaitsevaan Vakiopaineeseen nähden oli myös varsin optimaalinen.
+**RAVINTOLA SALSA ORKIDEAA** ei enää ole olemassa. Syksyllä 2014 se sijaitsi Jyväskylän Kauppakadulla legendaarisen Vakiopaineen naapurissa. Nopean googlauksen kautta lopettamiselle löytyy varsin yksiselitteinen peruste; asiakaspalaute näyttää olleen kautta linjan sangen nihkeää. Muistan itsekin ihmetelleeni erikoista ravintolaa, joka ei oikein osannut päättää, satsaako se meksikolaiseen vaiko aasialaiseen ruokaan, vai turvautuuko se perinteiseen pizzakebab-linjaan. Syy visiitille löytyikin ruokatarjonnan sijaan ihan muualta: paikan ikkunassa ilmoitettiin suurin kirjaimin oluttuopin hinnaksi 2,50 euroa. Sijainti vieressä sijaitsevaan Vakiopaineeseen nähden oli myös varsin optimaalinen.
 
 Vakiopaineessa oli käynnissä jyväskyläläisen indie-festivaali Höstfestin päiväklubi. Jukka Nousiainen oli yksi tuolloisen Höstfestin sankareista: päiväklubilla hän esiintyi Pettusville Alabamassa säestäen Petri Hannusta, legendaarisen Jolly Jumpersin nokkamiestä, ja illalla Jukalla ja Jytämimmeillä oli kunnia olla festivaalien päätöspäivän pääesiintyjä.
 

@@ -20,6 +20,11 @@ const transform = {
   img: ({ src, ...rest }: React.ImgHTMLAttributes<{}>) => (
     <StyledImage src={getImagePath(getImageFilename(src, 700))} {...rest} />
   ),
+  hr: styled.hr`
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    margin: 60px 100px;
+  `
 }
 
 const HtmlContent = (props: Props) => (

@@ -1,4 +1,5 @@
 export interface ReleaseData {
+  type: "release"
   catalogNumber: string
   author: string
   title: string
@@ -7,6 +8,7 @@ export interface ReleaseData {
 }
 
 export interface ExtendedReleaseData extends ReleaseData {
+  id: string
   genre: string[]
   description: string
   bandcampUrl?: string
@@ -15,13 +17,17 @@ export interface ExtendedReleaseData extends ReleaseData {
 }
 
 export interface ArticleData {
+  type: "article"
   title: string
   cover: string
   releaseDate: string
 }
 
 export interface ExtendedArticleData extends ArticleData {
+  id: string
   author: string
   lead: string
   body: string
 }
+
+export type HomeEntry = ReleaseData | ArticleData

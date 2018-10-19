@@ -4,7 +4,11 @@ import { getReleasePath, getArticlePath } from "./paths"
 import resizeImages from "../../resize-images"
 
 const optimizeReleases = R.map(
-  R.pick(["catalogNumber", "author", "title", "cover", "releaseDate"]),
+  R.pick(["type", "catalogNumber", "author", "title", "cover", "releaseDate"]),
+)
+
+const optimizeArticles = R.map(
+  R.pick(["type", "id", "title", "cover", "releaseDate"]),
 )
 
 export default async () => {
@@ -18,7 +22,9 @@ export default async () => {
     {
       path: "/",
       component: "src/containers/Home",
-      getData: () => ({ releases: optimizeReleases(releases) }),
+      getData: () => ({
+        entries: [...optimizeReleases(releases), ...optimizeArticles(articles)],
+      }),
     },
     ...releases.map(release => ({
       path: getReleasePath(release),

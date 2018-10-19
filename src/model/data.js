@@ -45,6 +45,7 @@ export const getReleases = () =>
     "content/releases",
     async ({ __content, author, ...header }) => ({
       ...header,
+      type: "release",
       author: author || "Eri esittäjiä",
       bandcampEmbed: await getBandCampEmbedCode(header.bandcampUrl),
       description: marked(__content),
@@ -56,6 +57,7 @@ export const getArticles = () =>
     "content/articles",
     async ({ __content, ...header }) => ({
       ...header,
+      type: "article",
       body: marked(__content),
     }),
   )
