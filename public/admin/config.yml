@@ -24,3 +24,16 @@ collections:
       - { label: "Spotify URL", name: "spotifyUrl", widget: "string", required: false }
     editor:
       preview: false
+  - name: "article"
+    label: "Articles"
+    label_singular: "Article"
+    folder: "content/articles"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Release date", name: "releaseDate", widget: "date", format: "YYYY-MM-DD" }
+      - { label: "Cover image", name: "cover", widget: "file" }
+      - { label: "Lead", name: "lead", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
