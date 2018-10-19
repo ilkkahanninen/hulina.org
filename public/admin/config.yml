@@ -3,7 +3,7 @@ backend:
   branch: master
 
 media_folder: content/images
-public_folder: ""
+public_folder: /images
 
 collections:
   - name: "release"
