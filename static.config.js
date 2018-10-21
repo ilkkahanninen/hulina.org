@@ -30,7 +30,14 @@ export default {
     // `renderMeta.styleTags` contains the styles we need to inject
     // into the head of each page.
     <Html>
-      <Head>{renderMeta.styleTags}</Head>
+      <Head>
+        <meta charset="UTF-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"
+        />
+        {renderMeta.styleTags}
+      </Head>
       <Body>{children}</Body>
     </Html>
   ),

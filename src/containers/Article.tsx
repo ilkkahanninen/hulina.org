@@ -65,7 +65,11 @@ const TitleWrapper = styled.div`
   }
 `
 
-const CatalogInfo = styled.div`
+const FooterTitleWrapper = styled(TitleWrapper)`
+  margin-top: 50px;
+`
+
+const ArticleInfo = styled.div`
   font-size: 80%
   line-height: 1.25em;
   text-transform: uppercase;
@@ -115,20 +119,22 @@ export default withRouteData(({ article }: Props) => {
         <Card>
           <TitleWrapper>
             <Title>{article.title}</Title>
-            <CatalogInfo>
+            <ArticleInfo>
               <ReleaseDate>{formatDate(article.releaseDate)}</ReleaseDate>
               <Author>{article.author}</Author>
-            </CatalogInfo>
+            </ArticleInfo>
           </TitleWrapper>
           <Lead>{article.lead}</Lead>
         </Card>
       </Wrapper>
       <Body>
         <HtmlContent content={article.body} />
-        <TitleWrapper>
-          <ReleaseDate>{formatDate(article.releaseDate)}</ReleaseDate>
-          <Author>{article.author}</Author>
-        </TitleWrapper>
+        <FooterTitleWrapper>
+          <ArticleInfo>
+            <ReleaseDate>{formatDate(article.releaseDate)}</ReleaseDate>
+            <Author>{article.author}</Author>
+          </ArticleInfo>
+        </FooterTitleWrapper>
       </Body>
       <Footer />
     </div>

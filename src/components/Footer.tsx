@@ -3,8 +3,10 @@ import styled from "styled-components"
 
 const Footer = styled.footer`
   background: black;
-  padding: 10px;
+  padding: 10px 20px;
   text-align: right;
+  font-size: 80%;
+  line-height: 1.25em;
 
   &,
   a {
