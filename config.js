@@ -1,3 +1,3 @@
 module.exports = {
-  publicURL: "https://hulina.netlify.com",
+  publicURL: "https://hulina.org",
 }
