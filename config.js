@@ -1,3 +1,3 @@
 module.exports = {
-  publicURL: "https://hulina.org",
+  publicURL: "https://www.hulina.org",
 }
